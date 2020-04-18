@@ -1,4 +1,4 @@
-# Assignment 3 - Record Manager #
+# Assignment 3 - Record Manager
 
 The record manager handles tables with a fixed schema. Clients can insert records, delete records, update records, and scan through the records in a table. A scan is associated with a search condition 
 and only returns records that match the search condition. Each table should be stored in a separate page file and your record manager should access the pages of the file through the buffer manager 
@@ -8,20 +8,20 @@ Following is the interface implemented:
 
 -----------------------------------------------------------------------------------------------------------------
 
-**- tables.h: **
+**- tables.h:**
 
 This header defines basic data structures for schemas, tables, records, record ids (```RIDs```), and values. Furthermore, this header defines functions for serializing these data structures as strings. 
 The serialization functions are provided (```rm_serializer.c```). There are four datatypes that can be used for records of a table: integer (```DT_INT```), float (```DT_FLOAT```), strings of a fixed length (```DT_STRING```), 
 and boolean (```DT_BOOL```). All records in a table conform to a common schema defined for this table. 
 A record is simply a record id (rid consisting of a page number and slot number) and the concatenation of the binary representation of its attributes according to the schema (data).
 
-**- expr.h: **
+**- expr.h:**
 
 This header defines data structures and functions to deal with expressions for scans. These functions are implemented in ```expr.c```. Expressions can either be constants (stored as a Value struct), references to 
 attribute values (represented as the position of an attribute in the schema), and operator invocations. Operators are either comparison operators (equals and smaller) that are defined for all data types and 
 boolean operators AND, OR, and NOT. Operators have one or more expressions as input. The expression framework allows for arbitrary nesting of operators as long as their input types are correct.
 
-**- record_mgr.h: **
+**- record_mgr.h:**
 
 There are five types of functions in the record manager: functions for table and record manager management, functions for handling the records in a table, functions related to scans, functions for dealing with 
 schemas, and function for dealing with attribute values and creating records. 
@@ -51,10 +51,10 @@ schemas, and function for dealing with attribute values and creating records.
 	*	```createRecord()```: It is used to create a new record, allocate memory to the record and retrieve the size of the record.
 	*	```freeRecord():``` It is used to free up space allocated to the record.
 	*	```getAttr():``` It is used to retrieve the attribute value from the record.
-	*	````setAttr()```: It is used to set the attribute value to the record.
+	*	```setAttr()```: It is used to set the attribute value to the record.
 -----------------------------------------------------------------------------------------------------------------
 
-## How to Run: ##
+## How to Run:
 Step 1: Open Command Promt/PowerShell/Terminal.
 
 Step 2: Navigate to the Assignment 3 directory.
@@ -68,13 +68,13 @@ Step 5: Type command ```make clean``` for clean up
 -----------------------------------------------------------------------------------------------------------------
 ## Contibutions: ##
 
-**Chirag Khandhar : **
+**Chirag Khandhar :**
 Record methods,```dberror```, ```buffer_list```, ```record_scan```  and related documentation
 
-**Akash Tanwani : **
+**Akash Tanwani :**
 Schema,  Scan, Attribute, test methods and related documentation
 
-**Gandhali Khedlekar : ** 
+**Gandhali Khedlekar :** 
 Table and Manager functions and related documentation
 
 -----------------------------------------------------------------------------------------------------------------
