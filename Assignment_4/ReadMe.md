@@ -1,4 +1,4 @@
-# Assignment 4 - B+-Tree #
+# Assignment 4 - B+-Tree
 
 In this assignment we are implementing a B+-tree index. The index is backed up by a page file and pages of the index are accessed through the previously implemented buffer manager. 
 As discussed in the lecture each node occupies one page. 
@@ -9,22 +9,22 @@ This Assignment is  built on top of the previous assignment **Record Manager**.
 
 -----------------------------------------------------------------------------------------------------------------
 
-**- Index Manager Functions: **
+**- Index Manager Functions:**
 
 It is used to initialize and shut down index manager. It is also used to deallocate the resources.
 
-**- B+ Tree Functions: **
+**- B+ Tree Functions:**
 
 *	```createBtree()``` It is used to create B+ tree index.
 *	```openBtree()``` It is used to open B+ tree index.
 *	```closeBtree()``` It is used to close B+ tree index.
 *	```deleteBtree()``` It is used to delete B+ tree index. It also removes the corresponding page.
 
-**- Debug Functions: **
+**- Debug Functions:**
 
 *	```printTree()``` It is used to create string representation of B+ tree. It is used for debugging. 
 
-**- Key Functions: **
+**- Key Functions:**
 
 
 *	```findKey()``` It is used to find the key in the B+ tree. It returns RID for the entry along with the search key.
@@ -34,7 +34,7 @@ It is used to initialize and shut down index manager. It is also used to dealloc
 
 -----------------------------------------------------------------------------------------------------------------
 
-## How to Run: ##
+## How to Run:
 Step 1: Open Command Promt/PowerShell/Terminal.
 
 Step 2: Navigate to the Assignment 4 directory.
@@ -48,15 +48,15 @@ Step 5: Type command ```make run2``` this will execute test_expr.c file
 Step 6: Type command ```make clean``` for clean up
 
 -----------------------------------------------------------------------------------------------------------------
-## Contibutions: ##
+## Contibutions:
 
-**Chirag Khandhar : **
+**Chirag Khandhar :**
 Index Access related functions and related documentation
 
-**Akash Tanwani : **
+**Akash Tanwani :**
 Create, Destroy, Open, and Close functions and related documentation
 
-**Gandhali Khedlekar : ** 
+**Gandhali Khedlekar :** 
 Access information functions, init and shutdown index manager and related documentation
 
 -----------------------------------------------------------------------------------------------------------------
